@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@600;700&display=swap');
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #000;
+    overflow: hidden;
+}
+.neontxt{
+    position: relative;
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.neontxt h2{
+    color: #fff;
+    font-size: large;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-shadow: 0 0 10px #00b3ff,
+    0 0 20px #00b3ff,
+    0 0 40px #00b3ff,
+    0 0 80px #00b3ff,
+    0 0 120px #00b3ff;
+}
+
+.lightbar{
+    position: absolute;
+    top: -15;
+    margin-left:-300px;
+    width: 4px;
+    height: 35px;
+    border-radius: 10px;
+	background: #fff;
+	z-index: 2;
+	box-shadow: 0 0 10px #00FF00,
+				0 0 20px #00FF00,
+				0 0 40px #00FF00,
+				0 0 80px #00FF00,
+				0 0 120px #00FF00;
+    animation: animation-lightbar 5s linear;
+}
+
+@keyframes animation-lightbar {
+    0%, 5%{
+        transform: scale(0) translateX(0);
+    }
+    10%{
+        transform: scale(1) translateX(0);
+    }
+    90%{
+        transform: scale(1) translateX(calc(500px - 200px));
+    }
+    95%, 100%{
+        transform: scale(1) translateX(calc(500px - 200px));
+    }
+}
+
+.toplayer{
+    position: absolute;
+    top: -15;
+    left: -2;
+    width: 300px;
+    height: 250px;
+    background: #000;
+    animation: animation-toplayer 5s linear;
+}
+
+@keyframes animation-toplayer {
+    0%, 5%{
+        transform: translateX(0);
+    }
+    10%{
+        transform: translateX(0);
+    }
+    90%{
+        transform: translateX(calc(500px - 200px));
+    }
+    95%, 100%{
+        transform: translateX(calc(500px - 200px));
+    }
+}

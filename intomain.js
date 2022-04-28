@@ -1,4 +1,4 @@
 function redirectpage(){
-    window.location="heart_1.html";
+    window.location="heartp.html";
 }
 setTimeout('redirectpage()', 4500);
